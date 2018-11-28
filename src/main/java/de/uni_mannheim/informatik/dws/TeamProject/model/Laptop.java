@@ -24,6 +24,7 @@ public class Laptop extends AbstractRecord<Attribute> {
     private String mpn;
     private String sku;
     private String name;
+    //private String manufacturer;
     //more to come in the next phase
 
     // Map the XML Element names to attribute names in the data set
@@ -33,6 +34,7 @@ public class Laptop extends AbstractRecord<Attribute> {
     public static final Attribute MPN = new Attribute ("Mpn");
     public static final Attribute SKU = new Attribute ("Sku");
     public static final Attribute NAME = new Attribute ("Name");
+    //public static final Attribute MANUFACTURER = new Attribute("Manufacturer");
     //more to come in the next phase
 
     @Override
@@ -97,6 +99,14 @@ public class Laptop extends AbstractRecord<Attribute> {
     public void setName(String name) {
         this.name = name;
     }
+
+//    public String getManufacturer() {
+//        return manufacturer;
+//    }
+
+//    public void setManufacturer(String manufacturer) {
+//        this.manufacturer = manufacturer;
+//    }
 
     @Override
     public boolean hasValue(Attribute attribute) {
