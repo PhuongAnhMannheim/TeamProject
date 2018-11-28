@@ -26,6 +26,7 @@ public class Laptop extends AbstractRecord<Attribute> {
     private String name;
     //more to come in the next phase
 
+    // Map the XML Element names to attribute names in the data set
     public static final Attribute OFFERID = new Attribute ("OfferId");
     public static final Attribute CLUSTERID = new Attribute ("ClusterId");
     public static final Attribute GTIN = new Attribute ("Gtin");
