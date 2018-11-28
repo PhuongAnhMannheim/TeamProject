@@ -1,13 +1,21 @@
 package de.uni_mannheim.informatik.dws.TeamProject.model;
 
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
+//import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 
 public class Laptop extends AbstractRecord<Attribute> {
+//public class Laptop implements Matchable {
+
+    public Laptop(String identifier, String provenance) {
+        this.identifier = identifier;
+        this.provenance = provenance;
+    }
 
     //Mandatory properties of Matchable
     private String identifier;
+    private String provenance;
 
     //Properties of laptop
     private String offerId;
@@ -26,13 +34,14 @@ public class Laptop extends AbstractRecord<Attribute> {
     public static final Attribute NAME = new Attribute ("Name");
     //more to come in the next phase
 
-    public Laptop(String identifier) {
-        this.identifier = identifier;
-    }
-
     @Override
     public String getIdentifier() {
         return identifier;
+    }
+
+    @Override
+    public String getProvenance() {
+        return provenance;
     }
 
     @Override
